@@ -1,13 +1,14 @@
-import { useState } from 'react'
+
 import './App.css'
+import Row from './Row'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <h1>Hey clever programmer lets build Netflix clone front-end today</h1>
-    </>
+    <div className='App'>
+      <Row title="NETFLIX-ORIGINAL"/>
+      <Row title="TRENDING NOW"/>
+    </div>
   )
 }
 
