@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from './helper/axios';
+import axios from '../../services/axios'
 import './row.css';
 
 const base_url = `https://image.tmdb.org/t/p/original/`;

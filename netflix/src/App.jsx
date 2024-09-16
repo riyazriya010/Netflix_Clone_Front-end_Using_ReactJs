@@ -1,13 +1,24 @@
 
-import './App.css'
-import Row from './Row'
-import requests from './helper/request';
+import './styles/App.css'
+import Row from './components/Row/Row';
+import requests from './services/request'
+import Banner from './components/Banner/Banner';
+import Navbar from './components/Navbar/Navbar';
 
 function App() {
 
+
   return (
-    <div className='App'>
-      <Row title="NETFLIX-ORIGINAL" fetchUrl={requests.fetchNetflixOriginals} isLargeRow/>
+    <div className='app'>
+
+      {/* Navbar */}
+      <Navbar />
+
+      {/* Banner */}
+      <Banner />
+      
+      {/* Body */}
+      <Row title="NETFLIX-ORIGINAL" fetchUrl={requests.fetchNetflixOriginals} isLargeRow={true}/>
       <Row title="TRENDING NOW" fetchUrl={requests.fetchTrending}/>
       <Row title="TOP RATED" fetchUrl={requests.fetchTopRated}/>
       <Row title="ACTION MOVIES" fetchUrl={requests.fetchActionMovies}/>
@@ -15,7 +26,7 @@ function App() {
       <Row title="HORROR MOVIES" fetchUrl={requests.fetchHorrorMovies}/>
       <Row title="ROMANCE MOVIES" fetchUrl={requests.fetchRomanceMovies}/>
       <Row title="DOCUMENTARIES" fetchUrl={requests.fetchDocumentaries}/>
-    </div>
+    </div> 
   )
 
 }
